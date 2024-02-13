@@ -1,0 +1,18 @@
+.home_page_container_icon {
+  height: 200px;
+}
+.home_page_container {
+  height: 100%;
+  background-image: linear-gradient(to right, #3499fe, #384c9d);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100vh;
+  gap: 10px;
+}
+.share {
+  border: 1px solid red;
+}
