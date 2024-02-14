@@ -11,8 +11,99 @@
   justify-content: flex-start;
   flex-direction: column;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.share_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(100vh);
+  transition-duration: 1s;
+  padding-bottom: 10px;
+}
+.share_popup_active {
+  transform: translateY(0px);
+}
+.share_popup {
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 10px;
 }
-.share {
-  border: 1px solid red;
+.titile_container {
+  margin-bottom: 20px;
+}
+.titile_container,
+.copy_webSite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.copy_webSite p {
+  color: #807e7e;
+}
+.copy_webSite {
+  background-color: rgb(237, 230, 230);
+  padding: 5px;
+  border-radius: 5px;
+}
+.closeButtonSharePopup {
+  border-radius: 50%;
+  background-color: #3499fe;
+}
+button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 5px;
+}
+.copy_button svg {
+  height: 15px;
+  width: 15px;
+}
+.closeButtonSharePopup svg {
+  width: 15px;
+  height: 15px;
+}
+.share_row__title_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.footer1 {
+  font-weight: 500;
+}
+.footer2 {
+  color: grey;
+}
+.share_row {
+  border: 1px solid rgba(92, 88, 88, 0.37);
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .share_popup {
+    width: calc(100% - 10px);
+  }
 }
