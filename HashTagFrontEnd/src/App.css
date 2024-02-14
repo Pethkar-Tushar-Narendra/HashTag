@@ -1,5 +1,17 @@
 .home_page_container_icon {
   height: 200px;
+  margin-bottom: 5px;
+}
+.header_title {
+  display: flex;
+}
+.openProduct {
+  cursor: pointer;
+}
+.openProduct img {
+  height: 20px;
+  width: 20px;
+  background-color: white;
 }
 .home_page_container {
   height: 100%;
@@ -12,7 +24,9 @@
   flex-direction: column;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
+  gap: 10px;
 }
 .share_container {
   position: absolute;
@@ -23,12 +37,15 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  transform: translateY(100vh);
+  transform: translateY(-200vh);
   transition-duration: 1s;
   padding-bottom: 10px;
 }
 .share_popup_active {
   transform: translateY(0px);
+}
+.description {
+  color: #fff;
 }
 .share_popup {
   border-radius: 10px;
@@ -54,6 +71,12 @@
 }
 .copy_webSite p {
   color: #807e7e;
+}
+.copy_webSite p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 30px);
 }
 .copy_webSite {
   background-color: rgb(237, 230, 230);
@@ -97,13 +120,68 @@ button {
 .share_row {
   border: 1px solid rgba(92, 88, 88, 0.37);
   border-radius: 5px;
+  cursor: pointer;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.image_container img {
+  height: 100%;
+  overflow: hidden;
+  width: 70px;
+  transition-duration: 2s;
+}
+.card_container:hover .image_container img {
+  transform: scale(1.2);
+}
+.card_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 400;
+  width: calc(100% - 120px) !important;
+}
+.info_container_icon {
+  cursor: pointer;
+  fill: #ffffff !important;
+}
+.info_container_icon:hover {
+  fill: #3499fe !important;
+}
+.info_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.card_container__image_title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: calc(100% - 60px);
+}
+.image_container {
+  height: 70px;
+  overflow: hidden;
+}
+.card_container {
+  width: 600px;
+  height: 80px;
+  background-color: #fff;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: #3499fe 5px 5px;
+}
 @media (max-width: 767px) {
   .share_popup {
     width: calc(100% - 10px);
+  }
+  .card_container {
+    width: 100%;
   }
 }
