@@ -1,0 +1,32 @@
+.home_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.align_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search_input {
+  /* height: 30px; */
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+}
+.ashika_logo {
+  height: 40px;
+}
+.gap_10 {
+  gap: 10px;
+}

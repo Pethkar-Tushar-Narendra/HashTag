@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import './CSS/Style.css';
-import HashTagSvg from './assets/HashTagSvg.mp4';
-import ShareOnFacebook from './ShareOnFacebook';
 import Card from './Card';
+import ShareOnFacebook from './ShareOnFacebook';
+import HashTagSvg from './assets/HashTagSvg.mp4';
+import { products } from './products';
 const HomePage = () => {
   const shareUrl = 'https://hash-tag-xi.vercel.app/';
   const youtubeUrl = 'https://youtube.com/';
@@ -21,12 +21,11 @@ const HomePage = () => {
         />
       </div>
       <h2 className="description">Amazon Products Links Here.</h2>
-      {new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)?.map((item) => (
+      {products?.map((item) => (
         <Card
-          shareUrl={
-            'https://www.amazon.in/Airdopes-141-Playtime-Resistance-Bluetooth/dp/B09N3ZNHTY/ref=s9_acsd_al_ot_c2_x_1_t?_encoding=UTF8&pf_rd_m=A21TJRUUN4KGV&pf_rd_s=merchandised-search-10&pf_rd_r=NG21592VDZPEHN5PB7HT&pf_rd_p=c5cdb8d6-3b28-47aa-aeaf-b6274a27f3d5&pf_rd_t=&pf_rd_i=976419031'
-          }
-          title={'Title'}
+          shareUrl={item?.shareUrl}
+          title={item?.title}
+          image={item?.image}
         />
       ))}
       <div className="info_container">

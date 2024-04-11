@@ -142,6 +142,7 @@ button {
   font-size: 18px;
   font-weight: 400;
   width: calc(100% - 120px) !important;
+  color: #000000;
 }
 .info_container_icon {
   cursor: pointer;

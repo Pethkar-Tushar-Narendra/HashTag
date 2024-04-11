@@ -1,5 +1,4 @@
 import ShareOnFacebook from './ShareOnFacebook';
-import image from './assets/image.jpg';
 import share from './assets/share.png';
 const Card = ({
   showModal,
@@ -8,6 +7,7 @@ const Card = ({
   copyText,
   shareUrl,
   title,
+  image,
 }) => {
   return (
     <div className="card_container">
